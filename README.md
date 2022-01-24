@@ -23,9 +23,8 @@ The time series data processing step
 
 ---
 
-**Code Structure:**
+**Code Instructions:**
 
----
 
 To train the Running data GAN model:
 ```
@@ -35,4 +34,9 @@ python RunningGAN_Train.py
 To train the Jumping data GAN model:
 ```
 python JumpingGAN_Train.py
+```
+
+A simple example of using pre-trained model to generate synthetic Running and Jumping data:
+```
+Running&JumpingVisualization.ipynb
 ```
