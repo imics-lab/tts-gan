@@ -28,6 +28,70 @@ We view a time-series data sequence like an image with a height equal to 1. The 
 
 ---
 
+**Repository structures:**
+
+> ./images
+
+Several images of the TTS-GAN project
+
+
+> ./pre-trained-models
+
+Saved pre-trained GAN model checkpoints
+
+
+> dataLoader.py
+
+The UniMiB dataset dataLoader used for loading GAN model training/testing data
+
+
+> LoadRealRunningJumping.py
+
+Load real running and jumping data from UniMiB dataset
+
+
+> LoadSyntheticRunningJumping.py
+
+Load Synthetic running and jumping data from the pre-trained GAN models
+
+
+> functions.py
+
+The GAN model training and evaluation functions
+
+
+> train_GAN.py
+
+The major GAN model training file
+
+
+> visualizationMetrics.py
+
+The help functions to draw T-SNE and PCA plots
+
+
+> adamw.py 
+
+The adamw function file
+
+
+> cfg.py
+
+The parse function used for reading parameters to train_GAN.py file
+
+
+> JumpingGAN_Train.py
+
+Run this file to start training the Jumping GAN model
+
+
+> RunningGAN_Train.py
+
+Run this file to start training the Running GAN model
+
+
+---
+
 **Code Instructions:**
 
 
@@ -45,3 +109,4 @@ A simple example of using pre-trained model to generate synthetic Running and Ju
 ```
 Running&JumpingVisualization.ipynb
 ```
+---
