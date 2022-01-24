@@ -11,7 +11,11 @@ Time-series datasets used in machine learning applications often are small in si
 
 **Key Idea:**
 
-1.   Transformer GAN generate synthetic time-series data
+Transformer GAN generate synthetic time-series data
+
+![The TTS-GAN Architecture](./images/TTS-GAN.pdf)
+
+![The time series data processing step](./images/PositionalEncoding.pdf)
 
 ---
 
