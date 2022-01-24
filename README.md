@@ -105,7 +105,7 @@ To train the Jumping data GAN model:
 python JumpingGAN_Train.py
 ```
 
-A simple example of using pre-trained model to generate synthetic Running and Jumping data:
+A simple example of visualizing the similarity between the synthetic running&jumping data and the real running&jumping data:
 ```
 Running&JumpingVisualization.ipynb
 ```
