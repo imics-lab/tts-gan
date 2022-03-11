@@ -13,13 +13,82 @@ Time-series datasets used in machine learning applications often are small in si
 
 Transformer GAN generate synthetic time-series data
 
-The TTS-GAN Architecture 
+**The TTS-GAN Architecture** 
 
 ![The TTS-GAN Architecture](./images/TTS-GAN.png)
 
-The time series data processing step
+The TTS-GAN model architecture is shown in the upper figure. It contains two main parts, a generator, and a discriminator. Both of them are built based on the transformer encoder architecture. An encoder is a composition of two compound blocks. A multi-head self-attention module constructs the first block and the second block is a feed-forward MLP with GELU activation function. The normalization layer is applied before both of the two blocks and the dropout layer is added after each block. Both blocks employ residual connections. 
+
+
+**The time series data processing step**
 
 ![The time series data processing step](./images/PositionalEncoding.png)
+
+We view a time-series data sequence like an image with a height equal to 1. The number of time-steps is the width of an image, *W*. A time-series sequence can have a single channel or multiple channels, and those can be viewed as the number of channels (RGB) of an image, *C*. So an input sequence can be represented with the matrix of size *(Batch Size, C, 1, W)*. Then we choose a patch size *N* to divide a sequence into *W / N* patches. We then add a soft positional encoding value by the end of each patch, the positional value is learned during model training. Each patch will then have the data shape *(Batch Size, C, 1, (W/N) + 1)* This process is shown in the upper figure.
+
+---
+
+**Repository structures:**
+
+> ./images
+
+Several images of the TTS-GAN project
+
+
+> ./pre-trained-models
+
+Saved pre-trained GAN model checkpoints
+
+
+> dataLoader.py
+
+The UniMiB dataset dataLoader used for loading GAN model training/testing data
+
+
+> LoadRealRunningJumping.py
+
+Load real running and jumping data from UniMiB dataset
+
+
+> LoadSyntheticRunningJumping.py
+
+Load Synthetic running and jumping data from the pre-trained GAN models
+
+
+> functions.py
+
+The GAN model training and evaluation functions
+
+
+> train_GAN.py
+
+The major GAN model training file
+
+
+> visualizationMetrics.py
+
+The help functions to draw T-SNE and PCA plots
+
+
+> adamw.py 
+
+The adamw function file
+
+
+> cfg.py
+
+The parse function used for reading parameters to train_GAN.py file
+
+
+> JumpingGAN_Train.py
+
+Run this file to start training the Jumping GAN model
+
+
+> RunningGAN_Train.py
+
+Run this file to start training the Running GAN model
+
 
 ---
 
@@ -36,7 +105,8 @@ To train the Jumping data GAN model:
 python JumpingGAN_Train.py
 ```
 
-A simple example of using pre-trained model to generate synthetic Running and Jumping data:
+A simple example of visualizing the similarity between the synthetic running&jumping data and the real running&jumping data:
 ```
 Running&JumpingVisualization.ipynb
 ```
+---
