@@ -9,8 +9,8 @@ import os
 
 class Synthetic_Dataset(Dataset):
     def __init__(self, 
-                 Jumping_model_path = './pre-trained-model/JumpingGAN_checkpoint',
-                 Running_model_path = './pre-trained-model/RunningGAN_checkpoint',
+                 Jumping_model_path = './pre-trained-models/JumpingGAN_checkpoint',
+                 Running_model_path = './pre-trained-models/RunningGAN_checkpoint',
                  sample_size = 1000
                  ):
         
