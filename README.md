@@ -1,6 +1,11 @@
 # TTS-GAN: A Transformer-based Time-Series Generative Adversarial Network
 ---
-This repository contains code from the paper "TTS-GAN: A Transformer-based Time-Series Generative Adversarial Network"
+
+This repository contains code from the paper "TTS-GAN: A Transformer-based Time-Series Generative Adversarial Network".
+
+The paper has been accepted to publish in the 20th International Conference on Artificial Intelligence in Medicine (AIME 2022).
+
+The camera ready version will be available soon.
 
 ---
 
